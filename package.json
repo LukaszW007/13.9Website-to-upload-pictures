@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/LukaszW007/13.9Website-to-upload-pictures#readme",
   "dependencies": {
-    "colors": "^1.1.2"
+    "colors": "^1.1.2",
+    "formidable": "^1.1.1"
   }
 }
