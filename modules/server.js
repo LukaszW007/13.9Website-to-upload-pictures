@@ -8,12 +8,10 @@ function start () {
         console.log('Request received');
         console.log('Request: ' + request.url + ' received!');
         response.writeHead(200, {"Content-type": "text/plain; charset=utf-8"});
-        console.log(request.toString(), response.toString());
         switch (request.url) {
             case '/':
             case '/start':
                 handlers.welcome(request, response);
-                console.log(request, response);
                 break;
             case '/upload':
                 handlers.upload(request, response);

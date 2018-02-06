@@ -5,7 +5,7 @@ exports.upload = function (request, response) {
     console.log("Rozpoczynam obsługę żądania upload.");
     var form = new formidable.IncomingForm();
     form.parse(request, function (error, fields, files) {
-        fs.renameSync(files.upload.path, "test.png");
+        // fs.renameSync(files.upload.path, "test.png");
         response.writeHead(200, {"Content-Type": "text/html"});
         response.write("received image: <br/>");
         response.write("<img src='/show'>");
@@ -20,7 +20,6 @@ exports.welcome = function (request, response) {
         response.write(html);
         response.end();
     });
-
 };
 
 exports.errors = function (request, response) {
